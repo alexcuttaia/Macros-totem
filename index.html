@@ -3049,14 +3049,17 @@ body.totem input{-webkit-user-select:auto;user-select:auto;}
 
 /* ---------- Attesa: QR e lingue ---------- */
 .tt-start{min-height:var(--tt-vh,100vh);box-sizing:border-box;display:flex;flex-direction:column;padding-bottom:48px;background:var(--bg);}
-.tt-start-hero{position:relative;color:#fff;text-align:center;padding:80px 40px 200px;min-height:calc(var(--tt-vh,100vh) * .42);display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;}
-.tt-hero-bg{position:absolute;inset:0 0 auto;width:100%;height:calc(100% + 260px);object-fit:cover;object-position:50% top;z-index:0;pointer-events:none;}
-.tt-start-hero>*:not(.tt-hero-bg){position:relative;z-index:1;}
-.tt-start-logo{width:250px;height:auto;display:block;margin:0 auto 26px;}
-.tt-start-hero h1{font-size:58px;font-weight:800;line-height:1.02;letter-spacing:-.02em;text-shadow:0 4px 20px rgba(0,80,60,.15);}
+/* Parte alta: logo e titolo su una fascia con gli stessi colori del bordo alto dello sfondo, poi lo sfondo intero
+   (assets/photos/totem-hero.webp, mai ritagliato) che sfuma nella fascia; il riquadro «Accedi» si appoggia sull'onda */
+.tt-start-hero{position:relative;color:#fff;text-align:center;}
+.tt-hero-top{position:relative;z-index:1;padding:80px 40px 70px;background:linear-gradient(90deg,#3fc36d 0%,#0ea884 25%,#17b1ad 50%,#15addb 75%,#01a5fb 100%);}
+.tt-hero-bg{display:block;width:100%;height:auto;margin-top:-70px;position:relative;z-index:0;pointer-events:none;
+  -webkit-mask-image:linear-gradient(transparent 0,#000 70px);mask-image:linear-gradient(transparent 0,#000 70px);}
+.tt-start-hero>.tt-hero-top{z-index:0;}
+.tt-start-logo{width:230px;height:auto;display:block;margin:0 auto 22px;}
+.tt-start-hero h1{font-size:56px;font-weight:800;line-height:1.02;letter-spacing:-.02em;text-shadow:0 4px 20px rgba(0,80,60,.15);}
 .tt-start-hero h1 span{color:#d9fbe0;}
-.tt-start-hero p{margin-top:16px;font-size:22px;opacity:.95;}
-.tt-login-card{position:relative;z-index:2;margin:-176px 32px 40px;background:var(--surface);border-radius:32px;padding:30px;box-shadow:0 34px 70px -34px rgba(20,21,25,.38);
+.tt-login-card{position:relative;z-index:2;margin:-92px 32px 40px;background:var(--surface);border-radius:32px;padding:30px;box-shadow:0 34px 70px -34px rgba(20,21,25,.38);
   display:grid;grid-template-columns:270px 1fr;gap:30px;align-items:center;}
 .tt-login-txt{border-left:1px solid var(--line-strong);padding-left:30px;}
 .tt-qr{width:270px;aspect-ratio:1;padding:14px;border-radius:22px;background:#fff;border:1px solid var(--line-strong);box-sizing:border-box;}
@@ -22158,10 +22161,12 @@ const TOTEM_HERO_BG = 'data:image/webp;base64,UklGRoYiAABXRUJQVlA4WAoAAAAQAAAABw
 function totemStartHtml(){
   return `<div class="tt-start">
     <div class="tt-start-hero">
-      <img class="tt-hero-bg" src="${TOTEM_HERO_BG}" alt="" draggable="false">
       ${totemLangHtml()}
-      <img class="tt-start-logo" src="${LOGO_V5.full.dark}" alt="MACRO'S" width="${LOGO_V5.full.w}" height="${LOGO_V5.full.h}" draggable="false">
-      <h1>YOUR CHOICE.<br><span>YOUR MACROS.</span></h1>
+      <div class="tt-hero-top">
+        <img class="tt-start-logo" src="${LOGO_V5.full.dark}" alt="MACRO'S" width="${LOGO_V5.full.w}" height="${LOGO_V5.full.h}" draggable="false">
+        <h1>YOUR CHOICE.<br><span>YOUR MACROS.</span></h1>
+      </div>
+      <img class="tt-hero-bg" src="${TOTEM_HERO_BG}" alt="" draggable="false">
     </div>
     <div class="tt-login-card">
       <div class="tt-qr" data-tt-qr aria-label="${uiT('totem.qrLabel','QR per accedere con l\'app')}">${TT.qr}</div>
