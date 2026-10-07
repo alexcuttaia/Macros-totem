@@ -3048,37 +3048,43 @@ body.totem input{-webkit-user-select:auto;user-select:auto;}
 .totem .tt-modal .modal-card{max-width:460px;}
 
 /* ---------- Attesa: QR e lingue ---------- */
-.tt-start{min-height:var(--tt-vh,100vh);box-sizing:border-box;display:flex;flex-direction:column;padding-bottom:32px;}
-.tt-start-hero{background:var(--grad-green);color:#fff;text-align:center;padding:48px 40px 120px;border-radius:0 0 48px 48px;}
-.tt-start-logo{width:210px;height:auto;display:block;margin:0 auto 22px;}
-.tt-start-hero h1{font-size:46px;font-weight:800;line-height:1.04;letter-spacing:-.02em;}
-.tt-start-hero h1 span{color:var(--accent-dim);}
-.tt-start-hero p{margin-top:12px;font-size:19px;opacity:.92;}
-.tt-login-card{margin:-84px 32px 0;background:var(--surface);border-radius:32px;padding:28px;box-shadow:0 30px 60px -30px rgba(20,21,25,.35);
-  display:grid;grid-template-columns:250px 1fr;gap:28px;align-items:center;}
-.tt-qr{width:250px;aspect-ratio:1;padding:14px;border-radius:22px;background:#fff;border:1px solid var(--line-strong);box-sizing:border-box;}
+.tt-start{min-height:var(--tt-vh,100vh);box-sizing:border-box;display:flex;flex-direction:column;padding-bottom:48px;background:var(--bg);}
+.tt-start-hero{position:relative;color:#fff;text-align:center;padding:110px 40px 190px;min-height:calc(var(--tt-vh,100vh) * .5);display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;}
+.tt-hero-art{position:absolute;inset:0;width:100%;height:100%;z-index:0;}
+.tt-hero-leaf{position:absolute;top:34px;right:26px;width:120px;height:120px;z-index:0;transform:rotate(8deg);}
+.tt-start-hero>*:not(svg){position:relative;z-index:1;}
+.tt-start-logo{width:250px;height:auto;display:block;margin:0 auto 26px;}
+.tt-start-hero h1{font-size:58px;font-weight:800;line-height:1.02;letter-spacing:-.02em;text-shadow:0 4px 20px rgba(0,80,60,.15);}
+.tt-start-hero h1 span{color:#d9fbe0;}
+.tt-start-hero p{margin-top:16px;font-size:22px;opacity:.95;}
+.tt-login-card{position:relative;z-index:2;margin:-150px 32px 40px;background:var(--surface);border-radius:32px;padding:30px;box-shadow:0 34px 70px -34px rgba(20,21,25,.38);
+  display:grid;grid-template-columns:270px 1fr;gap:30px;align-items:center;}
+.tt-login-txt{border-left:1px solid var(--line-strong);padding-left:30px;}
+.tt-qr{width:270px;aspect-ratio:1;padding:14px;border-radius:22px;background:#fff;border:1px solid var(--line-strong);box-sizing:border-box;}
 .tt-qr:empty{background:var(--surface-2);}
 .tt-qr svg{width:100%;height:100%;display:block;}
 .tt-login-txt h2{font-size:25px;line-height:1.15;}
-.tt-steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px;}
-.tt-steps li{display:flex;align-items:center;gap:12px;font-size:16px;line-height:1.3;}
-.tt-steps b{flex:0 0 32px;height:32px;border-radius:50%;background:var(--accent-dim);color:#2f8f2f;display:flex;align-items:center;justify-content:center;font-size:15px;}
+.tt-steps{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:16px;}
+.tt-steps li{display:flex;align-items:center;gap:14px;font-size:16px;line-height:1.3;}
+.tt-steps b{flex:0 0 36px;height:36px;border-radius:50%;background:var(--accent-dim);color:#2f8f2f;display:flex;align-items:center;justify-content:center;font-size:16px;}
 .tt-demo-link{display:flex;align-items:center;justify-content:center;gap:6px;margin:16px 32px 0;color:var(--muted);font-size:13px;text-decoration:underline;}
 .tt-demo-link svg{width:16px;height:16px;}
-.tt-or{display:flex;align-items:center;gap:14px;margin:26px 32px 18px;color:var(--muted);font-size:15px;}
+.tt-or{display:flex;align-items:center;gap:14px;margin:auto 32px 24px;color:var(--muted);font-size:15px;}
 .tt-or::before,.tt-or::after{content:'';flex:1;height:1px;background:var(--line-strong);}
-.tt-guest{margin:0 32px;height:78px;border-radius:100px;background:var(--ink);color:var(--on-ink);font-family:'Poppins',sans-serif;font-weight:600;font-size:22px;
-  display:flex;align-items:center;justify-content:center;gap:10px;}
+.tt-guest{margin:0 32px auto;height:84px;font-size:23px;gap:12px;}
 .tt-guest svg{width:22px;height:22px;}
-.tt-showcase{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:34px 32px 0;}
-.tt-sc{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;}
-.tt-sc-pic{width:120px;height:120px;border-radius:50%;background:var(--surface);box-shadow:0 14px 30px -20px rgba(20,21,25,.4);display:flex;align-items:center;justify-content:center;}
-.tt-sc-pic img{width:104px;height:104px;object-fit:contain;}
-.tt-sc-l{font-size:13px;font-weight:600;line-height:1.25;color:var(--muted);}
-.tt-langs{margin-top:auto;padding:28px 32px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;}
-.tt-langs>svg{width:22px;height:22px;color:var(--muted);margin-right:4px;}
-.tt-lang{padding:12px 20px;border-radius:100px;background:var(--surface);font-size:15px;font-weight:600;box-shadow:0 2px 10px rgba(36,37,42,.06);}
-.tt-lang.on{background:var(--ink);color:var(--on-ink);}
+
+.tt-langpick{position:absolute!important;top:24px;left:24px;z-index:5!important;text-align:left;}
+.tt-lang-btn{width:64px;height:64px;border-radius:50%;padding:5px;background:rgba(255,255,255,.95);box-shadow:0 10px 24px -10px rgba(0,60,40,.45);display:flex;}
+.tt-flag{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);}
+.tt-flag svg{width:100%;height:100%;display:block;}
+.tt-flag-sm{width:38px;height:38px;flex-shrink:0;}
+.tt-lang-scrim{position:fixed;inset:0;z-index:0;background:transparent;}
+.tt-lang-menu{position:relative;z-index:1;margin-top:10px;width:250px;background:var(--surface);border-radius:24px;padding:8px;box-shadow:0 24px 50px -20px rgba(20,21,25,.4);color:var(--ink);}
+.tt-lang-item{width:100%;display:flex;align-items:center;gap:14px;padding:10px 12px;border-radius:16px;font-size:17px;font-weight:600;text-align:left;}
+.tt-lang-item>span:nth-child(2){flex:1;}
+.tt-lang-item.on{background:var(--accent-dim);}
+.tt-lang-item>svg{width:20px;height:20px;color:#2f8f2f;}
 
 /* ---------- Mangio qui o porto via ---------- */
 .tt-modepick{position:relative;min-height:var(--tt-vh,100vh);box-sizing:border-box;padding:40px 32px 80px;display:flex;flex-direction:column;justify-content:center;text-align:center;}
@@ -22059,7 +22065,7 @@ function totemReset(){
   STATE.matchPick = {carb:null, protein:null, fat:null}; STATE.matchTop = {}; STATE.matchTopOpen = null;
   STATE.build = {carb:null, protein:null, fat:null, extras:[], drinks:[]};
   STATE.settings.language = TOTEM_LANG;
-  Object.assign(TT, {phase:'start', user:null, mode:null, table:'', pay:null, last:null, paying:false, doneAt:0, idleEnd:0, touchAt:Date.now()});
+  Object.assign(TT, {phase:'start', langOpen:false, user:null, mode:null, table:'', pay:null, last:null, paying:false, doneAt:0, idleEnd:0, touchAt:Date.now()});
   totemRefreshCode();
   render();
   window.scrollTo({top:0});
@@ -22128,11 +22134,39 @@ function totemDemoLinkHtml(){
 }
 
 /* ---------------- 1. ATTESA: QR per accedere ---------------- */
-const TOTEM_SHOWCASE = ['m1', 'm3', 'm7', 'm10'];   // piatti in vetrina sotto il QR (con la foto)
+/* Bandiere delle lingue (disegnate: le emoji delle bandiere non esistono su Windows, il sistema di molti totem) */
+const TOTEM_FLAGS = {
+  it:'<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#009246"/><rect x="2" width="1" height="2" fill="#CE2B37"/>',
+  fr:'<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/><rect x="2" width="1" height="2" fill="#ED2939"/>',
+  de:'<rect width="3" height="2" fill="#FFCE00"/><rect width="3" height="1.334" fill="#DD0000"/><rect width="3" height=".667" fill="#000"/>',
+  es:'<rect width="3" height="2" fill="#AA151B"/><rect y=".5" width="3" height="1" fill="#F1BF00"/>',
+  en:'<rect width="3" height="2" fill="#012169"/><path d="M0 0 3 2M3 0 0 2" stroke="#fff" stroke-width=".4"/><path d="M0 0 3 2M3 0 0 2" stroke="#C8102E" stroke-width=".16"/><path d="M1.5 0v2M0 1h3" stroke="#fff" stroke-width=".6"/><path d="M1.5 0v2M0 1h3" stroke="#C8102E" stroke-width=".36"/>',
+};
+function totemFlag(l){ return `<svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${TOTEM_FLAGS[l] || ''}</svg>`; }
+
+/* In alto a sinistra: la bandiera della lingua in uso; toccandola si apre l'elenco delle lingue */
+function totemLangHtml(){
+  const cur = STATE.settings.language;
+  return `<div class="tt-langpick">
+    <button class="tt-lang-btn" data-action="tt-lang-toggle" aria-expanded="${!!TT.langOpen}" aria-label="${LANG_LABELS[cur]}"><span class="tt-flag">${totemFlag(cur)}</span></button>
+    ${TT.langOpen ? `<button class="tt-lang-scrim" data-action="tt-lang-toggle" aria-label="${uiT('common.close','Chiudi')}"></button>
+    <div class="tt-lang-menu" role="menu">${Object.keys(LANG_LABELS).map(l=> `<button class="tt-lang-item ${cur === l ? 'on' : ''}" role="menuitem" data-action="tt-lang" data-lang="${l}">
+      <span class="tt-flag tt-flag-sm">${totemFlag(l)}</span><span>${LANG_LABELS[l]}</span>${cur === l ? iconSvg('check') : ''}</button>`).join('')}</div>` : ''}
+  </div>`;
+}
+
 function totemStartHtml(){
-  const langs = Object.keys(LANG_LABELS).map(l=> `<button class="tt-lang ${STATE.settings.language === l ? 'on' : ''}" data-action="tt-lang" data-lang="${l}">${LANG_LABELS[l]}</button>`).join('');
   return `<div class="tt-start">
     <div class="tt-start-hero">
+      <svg class="tt-hero-art" viewBox="0 0 720 560" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="tt-hg" x1="0" y1="0" x2="1" y2=".4"><stop offset="0" stop-color="#2fc96a"/><stop offset=".55" stop-color="#1bbf9a"/><stop offset="1" stop-color="#1aa8e0"/></linearGradient></defs>
+        <path d="M0 0H720V430C640 470 600 380 520 420C430 465 400 540 300 520C210 500 160 420 90 440C50 452 20 470 0 480Z" fill="url(#tt-hg)"/>
+        <path d="M0 120C90 90 170 160 200 250C230 340 170 430 70 450C40 456 18 462 0 470Z" fill="#5fe08b" opacity=".45"/>
+        <path d="M720 150C640 150 560 210 545 300C530 390 590 450 680 455L720 456Z" fill="#3ad7e6" opacity=".35"/>
+        <path d="M720 380C690 350 640 330 600 350C620 300 650 280 720 290Z" fill="#7cf0ff" opacity=".25"/>
+      </svg>
+      <svg class="tt-hero-leaf" viewBox="0 0 100 100" aria-hidden="true"><path d="M90 6C50 6 14 30 10 70c-1 10 2 18 6 24 34-4 70-30 74-88Z" fill="#7cf3c8" opacity=".55"/><path d="M18 88C36 60 58 38 84 16" stroke="#fff" stroke-opacity=".5" stroke-width="2.5" fill="none"/></svg>
+      ${totemLangHtml()}
       <img class="tt-start-logo" src="${LOGO_V5.full.dark}" alt="MACRO'S" width="${LOGO_V5.full.w}" height="${LOGO_V5.full.h}" draggable="false">
       <h1>YOUR CHOICE.<br><span>YOUR MACROS.</span></h1>
       <p>${uiT('totem.startSub','Il tuo pasto su misura, al grammo.')}</p>
@@ -22150,10 +22184,7 @@ function totemStartHtml(){
     </div>
     ${totemDemoLinkHtml()}
     <div class="tt-or"><span>${uiT('totem.or','oppure')}</span></div>
-    <button class="tt-guest" data-action="tt-guest">${uiT('totem.guest','Ordina senza account')} ${iconSvg('chev')}</button>
-    <div class="tt-showcase">${TOTEM_SHOWCASE.map(id=> findFood(id)).filter(f=> f && foodPhoto(f.id)).map(f=>`<span class="tt-sc">
-      <span class="tt-sc-pic"><img src="${photoThumb(foodPhoto(f.id))}" alt="" draggable="false"></span><span class="tt-sc-l">${tName(f)}</span></span>`).join('')}</div>
-    <div class="tt-langs">${iconSvg('globe')}${langs}</div>
+    <button class="btn btn-primary tt-guest" data-action="tt-guest">${uiT('totem.guest','Ordina senza account')} ${iconSvg('chev')}</button>
   </div>`;
 }
 
@@ -22433,7 +22464,8 @@ function totemLoginModal(){
 
 /* Azioni dei pulsanti (data-action) */
 defineActions({
-  'tt-lang'(el){ if(LANG_LABELS[el.dataset.lang]){ STATE.settings.language = el.dataset.lang; render(); } },
+  'tt-lang'(el){ if(LANG_LABELS[el.dataset.lang]){ STATE.settings.language = el.dataset.lang; TT.langOpen = false; render(); } },
+  'tt-lang-toggle'(){ TT.langOpen = !TT.langOpen; render(); },
   'tt-guest'(){ TT.phase = 'mode'; render(); },
   'tt-mode-back'(){
     if(TT.mode){ TT.phase = 'order'; render(); return; }
