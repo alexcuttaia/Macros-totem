@@ -3108,7 +3108,9 @@ body.totem input{-webkit-user-select:auto;user-select:auto;}
 /* ---------- Ordine: intestazione, colonna delle categorie, barra in basso ---------- */
 #tt-head{position:sticky;top:0;z-index:40;background:var(--bg);}
 .tt-head{display:flex;align-items:center;gap:12px;padding:12px 20px;border-bottom:1px solid var(--line);height:76px;box-sizing:border-box;}
-.tt-head-logo{height:46px;display:flex;margin-right:6px;}
+/* logo al centro della colonna delle categorie (larga 132 px) */
+.tt-head-logo{height:46px;width:132px;margin-left:-20px;display:flex;justify-content:center;flex-shrink:0;}
+.tt-head-logo .brand-logo{justify-content:center;}
 .tt-chip{display:flex;align-items:center;gap:10px;background:var(--surface);border-radius:100px;padding:7px 16px 7px 7px;box-shadow:0 2px 10px rgba(36,37,42,.06);text-align:left;}
 .tt-chip-ic,.tt-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .tt-chip-ic{background:var(--accent-dim);color:#2f8f2f;}
